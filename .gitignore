@@ -1,0 +1,7 @@
+node_modules/
+build/
+.vscode/chrome/
+debug.log
+pm2.example.js
+production.guide.js
+public/doc

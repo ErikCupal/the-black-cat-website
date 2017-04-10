@@ -1,0 +1,55 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Node Dev",
+      "type": "node",
+      "request": "launch",
+      "protocol": "inspector",
+      "program": "${workspaceRoot}/src/server/index.tsx",
+      "outFiles": [
+        "${workspaceRoot}/build/development/**/*.js"
+      ],
+      "cwd": "${workspaceRoot}",
+      "sourceMaps": true
+    },
+    {
+      "name": "Node Production",
+      "type": "node",
+      "request": "launch",
+      "protocol": "inspector",
+      "program": "${workspaceRoot}/src/server/index.tsx",
+      "outFiles": [
+        "${workspaceRoot}/build/production/**/*.js"
+      ],
+      "cwd": "${workspaceRoot}",
+      "sourceMaps": true,
+      "env": {
+        "NODE_ENV": "production"
+      }
+    },
+    {
+      "name": "Chrome",
+      "type": "chrome",
+      "request": "launch",
+      "webRoot": "${workspaceRoot}/src",
+      "url": "http://localhost:3000",
+      "userDataDir": "${workspaceRoot}/.vscode/chrome",
+      "sourceMaps": true,
+      // "smartStep": true,
+      // "internalConsoleOptions": "openOnSessionStart"
+      "sourceMapPathOverrides": {
+        "webpack:///src/*": "${webRoot}/*"
+      }
+    }
+  ],
+  "compounds": [
+    {
+      "name": "Combo",
+      "configurations": [
+        "Node Dev",
+        "Chrome"
+      ]
+    }
+  ]
+}
