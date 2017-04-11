@@ -68,84 +68,84 @@ const server = (debug) => ({
     ]
 })
 
-const getDevelopment = () => server(true)
+const client = () => ({
+  entry: [
+    'babel-polyfill',
+    './src/client/index.tsx',
+  ],
 
-const getProduction = () => {
-  return [
-    server(false),
-    {
-      entry: [
-        'babel-polyfill',
-        './src/client/index.tsx',
-      ],
+  output: {
+    filename: 'app.js',
+    path: path.resolve(__dirname, 'build/production/')
+  },
 
-      output: {
-        filename: 'app.js',
-        path: path.resolve(__dirname, 'build/production/')
-      },
-
-      module: {
-        rules: [
+  module: {
+    rules: [
+      {
+        test: /\.tsx?$/,
+        exclude: /node_modules/,
+        use: [
           {
-            test: /\.tsx?$/,
-            exclude: /node_modules/,
-            use: [
-              {
-                loader: 'imports-loader?React=react'
-              },
-              {
-                loader: 'babel-loader',
-                options: {
-                  'presets': [
-                    [
-                      'latest',
-                      {
-                        'modules': false
-                      }
-                    ],
-                    'stage-0',
-                    'react'
-                  ]
-                }
-              },
-              {
-                loader: 'ts-loader'
-              }
-            ]
+            loader: 'imports-loader?React=react'
           },
+          {
+            loader: 'babel-loader',
+            options: {
+              'presets': [
+                [
+                  'latest',
+                  {
+                    'modules': false
+                  }
+                ],
+                'stage-0',
+                'react'
+              ]
+            }
+          },
+          {
+            loader: 'ts-loader'
+          }
         ]
       },
+    ]
+  },
 
-      resolve: {
-        extensions: ['.ts', '.tsx', '.js'],
-        modules: ['node_modules'],
+  resolve: {
+    extensions: ['.ts', '.tsx', '.js'],
+    modules: ['node_modules'],
+  },
+
+  plugins: [
+    new webpack.LoaderOptionsPlugin({
+      minimize: true,
+      debug: false
+    }),
+    new webpack.DefinePlugin({
+      'process.env': {
+        'NODE_ENV': JSON.stringify('production')
+      }
+    }),
+    new webpack.optimize.UglifyJsPlugin({
+      beautify: false,
+      mangle: {
+        screw_ie8: true,
+        keep_fnames: true
       },
+      compress: {
+        screw_ie8: true
+      },
+      comments: false
+    })
+  ],
+})
 
-      plugins: [
-        new webpack.LoaderOptionsPlugin({
-          minimize: true,
-          debug: false
-        }),
-        new webpack.DefinePlugin({
-          'process.env': {
-            'NODE_ENV': JSON.stringify('production')
-          }
-        }),
-        new webpack.optimize.UglifyJsPlugin({
-          beautify: false,
-          mangle: {
-            screw_ie8: true,
-            keep_fnames: true
-          },
-          compress: {
-            screw_ie8: true
-          },
-          comments: false
-        })
-      ],
-    }
-  ]
-}
+const getDevelopment = () => server(true)
+
+const getProduction = () => ([
+  server(false),
+  client(),
+])
 
 module.exports = (env = {}) => {
   const debug = env.NODE_ENV !== 'production'

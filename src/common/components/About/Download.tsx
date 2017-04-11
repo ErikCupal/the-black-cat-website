@@ -1,24 +1,29 @@
-import { a, active, darkslategray, floralwhite, hover, img, lightblue, visited } from 'stylish-components/lib'
-import { extend } from 'stylish-components'
-import Section from './Section'
-import Link from '../RedLink'
+import styled from 'styled-components'
+import DarkSection from './DarkSection'
+import ExternalLink from '../ExternalLink'
+import { FormattedMessage } from 'react-intl'
 
-const StyledSection = extend(Section)([{
-  backgroundColor: '#222727',
-  color: floralwhite,
-}])
-
-const Image = img([{
-  width: 600,
-  maxWidth: '90vw',
-  paddingTop: 20,
-}])
+const Image = styled.img`
+  width: 600px;
+  max-width: 90vw;
+  padding-top: 20px;
+`
 
 const Download = () => (
-  <StyledSection>
-    <Image src="images/gameplay.jpg" alt="Gameplay"/>
-    <h2><Link href="https://github.com/ErikCupal/the-black-cat-client/releases">Download</Link> (crossplatform)</h2>
-  </StyledSection>
+  <DarkSection>
+    <Image src="images/gameplay.jpg" alt="Gameplay" />
+    <h2>
+      <ExternalLink href="https://github.com/ErikCupal/the-black-cat-client/releases">
+        <FormattedMessage
+          id="about.download"
+          defaultMessage="Download"
+        />
+      </ExternalLink> (<FormattedMessage
+        id="about.downloadCrossplatform"
+        defaultMessage="crossplatform"
+      />)
+    </h2>
+  </DarkSection>
 )
 
 export default Download

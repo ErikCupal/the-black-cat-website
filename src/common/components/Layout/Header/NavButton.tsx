@@ -1,52 +1,36 @@
 import { TOGGLE_NAVBAR } from '../../../actions'
 import { connect } from '../../../store'
-import { button, child, div, firstChild, md, sm, transparent } from 'stylish-components'
-import { focus, hover } from 'stylish-components/lib'
+import { sm, md } from '../../../utils/css'
+import styled from 'styled-components'
 
-const StyledNavButton = button<{ pressed?: boolean }>(({ pressed }) => [
-  {
-    backgroundColor: transparent,
-    marginRight: 15,
-    border: 0,
-    marginLeft: 10,
-  },
-  hover({
-    outline: 'none',
-  }),
-  focus({
-    outline: 'none',
-  }),
-  sm({
-    marginRight: 40,
-  }),
-  md({
-    display: 'none',
-  }),
+const StyledNavButton = styled.button`
+  background-color: transparent;
+  margin-right: 15px;
+  border: 0;
+  margin-left: 10px;
+  &:hover { outline: none; }
+  &:focus { outline: none; }
+  ${sm`margin-right: 40px;`}
+  ${md`display: none;`}
+`
 
-  child(
-    {
-      width: 26,
-      height: 3,
-      borderRadius: 1.5,
-      backgroundColor: pressed ? '#8a6c2c' : '#b38d3c',
-      marginTop: 3,
-    },
-    sm({
-      width: 30,
-      marginTop: 4,
-    }),
-  ),
-  firstChild(
-    {
-      marginTop: 0,
-    },
-    sm({
-      marginTop: 0,
-    }),
-  ),
-])
+interface IconBarProps {
+  first?: boolean,
+  pressed?: boolean,
+}
 
-const IconBar = () => (<div />)
+const IconBar = styled.div`
+  width: 26px;
+  height: 3px;
+  border-radius: 1.5px;
+  background-color: ${(props: IconBarProps) => props.pressed ? '#8a6c2c' : '#b38d3c'};
+  margin-top: ${(props: IconBarProps) => props.first ? '0' : '3px'};
+
+  ${sm`
+    width: 30px;
+    margin-top: ${(props: IconBarProps) => props.first ? '0' : '4px'};
+    `}
+`
 
 interface Props {
   pressed: boolean,
@@ -54,10 +38,10 @@ interface Props {
 }
 
 const NavButton = ({ pressed, onClick }: Props) => (
-  <StyledNavButton pressed={pressed} onClick={onClick}>
-    <IconBar />
-    <IconBar />
-    <IconBar />
+  <StyledNavButton onClick={onClick}>
+    <IconBar pressed={pressed} first/>
+    <IconBar pressed={pressed}/>
+    <IconBar pressed={pressed}/>
   </StyledNavButton>
 )
 

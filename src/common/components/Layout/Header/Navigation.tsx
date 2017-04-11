@@ -1,61 +1,76 @@
-import { a } from 'stylish-components/lib'
+// tslint:disable:no-any
+import { TOGGLE_NAVBAR } from '../../../actions'
+import { md } from '../../../utils/css'
 import { connect } from '../../../store'
 import { Link } from 'react-router-dom'
-import { extend, black, floralwhite, lightslategrey, md, nav, CSS } from 'stylish-components'
+import styled, { css } from 'styled-components'
+import { InjectedIntl, defineMessages, injectIntl } from 'react-intl'
 
-const linkStyle: CSS[] = [
-  {
-    textTransform: 'uppercase',
-    padding: 0,
-    lineHeight: 1.5,
-    fontSize: 20,
-    color: floralwhite,
-    textDecoration: 'none',
-    fontWeight: 600,
+const messages = defineMessages({
+  navAbout: {
+    id: 'nav.about',
+    defaultMessage: 'About',
   },
-  md({
-    marginRight: 20,
-    color: floralwhite,
-  }),
-]
+  navRules: {
+    id: 'nav.rules',
+    defaultMessage: 'Rules',
+  },
+})
 
-const NavLink = extend(Link)(linkStyle)
-const NavLinkExternal = a(linkStyle)
+const linkStyle = css`
+  text-transform: uppercase;
+  padding: 0;
+  line-height: 1.5;
+  font-size: 20px;
+  color: floralwhite;
+  text-decoration: none;
+  font-weight: 600;
+  
+  ${md`margin-right: 20px;`}
+`
 
-interface Props {
+const NavLink = styled(Link) `${linkStyle}`
+const NavLinkExternal = styled.a`${linkStyle}`
+
+interface StyledNavProps {
   collapsed?: boolean
 }
 
-const StyledNav = nav<Props>(({ collapsed }) => [
-  {
-    backgroundColor: 'rgba(21, 21, 20, 0.8)',
-    padding: 10,
-    paddingRight: 30,
-    textAlign: 'right',
+const StyledNav = styled.nav`
+  background-color: rgba(21, 21, 20, 0.8);
+  padding: 10px;
+  padding-right: 30px;
+  text-align: right;
 
-    display: collapsed ? 'none' : 'flex',
-    width: '100%',
-    flexDirection: 'column',
-    flexBasis: '100%',
-  },
-  md({
-    backgroundColor: 'initial',
-    padding: 0,
+  display: ${(props: StyledNavProps) => props.collapsed ? 'none' : 'flex'};
+  width: 100%;
+  flex-direction: column;
+  flex-basis: 100%;
 
-    display: 'flex',
-    width: 'auto',
-    flexDirection: 'row',
-    flexBasis: 'auto',
-    alignItems: 'center',
-    marginRight: '30px',
-  }),
-])
+  ${md`
+    background-color: initial;
+    padding: 0;
 
-const Navigation = ({ collapsed }: Props) => (
+    display: flex;
+    width: auto;
+    flex-direction: row;
+    flex-basis: auto;
+    align-items: center;
+    margin-right: 30px;
+  `}
+`
+
+interface NavigationProps {
+  collapsed?: boolean
+  toggleNavbar: () => void
+}
+
+const Navigation = ({ collapsed, toggleNavbar, intl }: NavigationProps & { intl: InjectedIntl }) => (
   <StyledNav collapsed={collapsed}>
-    <NavLink to="/">About</NavLink>
-    <NavLink to="/rules">Rules</NavLink>
+    <NavLink onClick={toggleNavbar} to="/">{intl.formatMessage(messages.navAbout)}</NavLink>
+    <NavLink onClick={toggleNavbar} to="/rules">{intl.formatMessage(messages.navRules)}</NavLink>
     <NavLinkExternal
+      onClick={toggleNavbar}
       href="//github.com/ErikCupal/the-black-cat-client"
       target="_blank">
       Github
@@ -65,4 +80,5 @@ const Navigation = ({ collapsed }: Props) => (
 
 export default connect()(
   state => ({ collapsed: state.navbarCollapsed }),
-)(Navigation)
+  dispatch => ({ toggleNavbar: () => dispatch({ type: TOGGLE_NAVBAR }) }),
+)(injectIntl(Navigation) as any)

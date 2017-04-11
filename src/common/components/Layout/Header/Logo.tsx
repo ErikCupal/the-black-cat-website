@@ -1,29 +1,33 @@
-import { floralwhite } from 'stylish-components/lib'
-import { div, sm, md, darkslategray } from 'stylish-components'
+import { md, sm } from '../../../utils/css'
+import { Link } from 'react-router-dom'
+import styled from 'styled-components'
 
-const Wrapper = div([
-  {
-    display: 'flex',
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginLeft: '63px',
-    fontSize: 30,
-    color: floralwhite,
-    height: 75,
-  },
-  sm({
-    marginLeft: '92px',
-  }),
-  md({
-    justifyContent: 'flex-start',
-    marginLeft: '5%',
-  }),
-])
+const Wrapper = styled.div`
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  margin-left: 63px;
+  font-size: 30px;
+  color: floralwhite;
+  height: 75px;
+  ${sm`
+    margin-left: 92px;
+    `}
+  ${md`
+    justify-content: flex-start;
+    margin-left: 5%;
+    `}
+`
+
+const LogoLink = styled(Link)`
+  text-decoration: none;
+  color: White;
+`
 
 const Logo = () => (
   <Wrapper>
-    The Black Cat
+    <LogoLink to="/">The Black Cat</LogoLink>
   </Wrapper>
 )
 

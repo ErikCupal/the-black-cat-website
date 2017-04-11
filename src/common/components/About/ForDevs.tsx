@@ -1,129 +1,97 @@
-import { extend } from 'stylish-components'
-import {
-  a,
-  active,
-  div,
-  floralwhite,
-  h2,
-  h3,
-  h4,
-  hover,
-  indianred,
-  li,
-  lightblue,
-  orange,
-  ul,
-  visited
-} from 'stylish-components/lib'
-import Section from './Section'
-import { NavLink } from 'react-router-dom'
+import LightSection from './LightSection'
+import DarkHeadingTwo from '../DarkHeadingTwo'
+import DarkHeadingThree from '../DarkHeadingThree'
+import ExternalLink from '../ExternalLink'
+import styled from 'styled-components'
+import { FormattedMessage } from 'react-intl'
 
-const StyledSection = extend(Section)([{
-  // height: 200,
-}])
+const BigLink = styled(ExternalLink) `
+  font-size: 1.3em;
+  line-height: 1em;
+  padding: 0 10px;
+`
 
-const Heading = h2([{
-  fontSize: '2em',
-  lineHeight: '1.4em',
-  textAlign: 'center',
-  marginBottom: 0,
-}])
+const GithubRepos = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
 
-const SubHeading = h3([{
-  fontSize: '1.6em',
-  lineHeight: '1.2em',
-  textAlign: 'center',
-}])
-
-const GithubRepo = a([
-  {
-    fontSize: '1.3em',
-    lineHeight: '1em',
-    textAlign: 'center',
-    padding: '0 10px',
-    color: indianred,
-  },
-  active({
-    color: indianred,
-  }),
-  visited({
-    color: indianred,
-  }),
-  hover({
-    color: orange,
-  }),
-])
-
-const GithubRepos = div([{
-  display: 'flex',
-  justifyContent: 'center',
-  alignItems: 'center',
-}])
-
-const CodeDocLinks = div([{
-  display: 'flex',
-  justifyContent: 'center',
-  alignItems: 'center',
-  marginBottom: 30,
-}])
-
-const StyledLink = extend(NavLink)([
-  {
-    fontSize: '1.3em',
-    lineHeight: '1em',
-    textAlign: 'center',
-    padding: '0 10px',
-    color: indianred,
-  },
-  active({
-    color: indianred,
-  }),
-  visited({
-    color: indianred,
-  }),
-  hover({
-    color: orange,
-  }),
-])
-
-const Link = a([
-  {
-    color: indianred,
-  },
-  active({
-    color: indianred,
-  }),
-  visited({
-    color: indianred,
-  }),
-  hover({
-    color: orange,
-  }),
-])
+const DocCodeLinks = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3rem;
+`
 
 const ForDevs = () => (
-  <StyledSection>
-    <Heading>For devs 😎🤓</Heading>
-    <SubHeading>How to experiment or contribute?</SubHeading>
-    <span
-      style={{ textAlign: 'center', fontSize: '1.2rem' }}
-    >
-      Take a look at the repos on Github and read instructions there
+  <LightSection>
+    <DarkHeadingTwo>
+      <FormattedMessage
+        id="about.forDevs"
+        defaultMessage="For devs"
+      /> 😎🤓
+    </DarkHeadingTwo>
+    <DarkHeadingThree>
+      <FormattedMessage
+        id="about.experimentOrContribute"
+        defaultMessage="How to experiment or contribute?"
+      />
+    </DarkHeadingThree>
+    <span style={{ textAlign: 'center', fontSize: '1.2rem' }}>
+      <FormattedMessage
+        id="about.takeALook"
+        defaultMessage="Take a look at the repos on Github and read instructions there"
+      />
     </span>
-    <br />
-    <span style={{ fontSize: '1.8rem' }}>👇</span>
-    <SubHeading>Github repos</SubHeading>
+    <span style={{ fontSize: '1.8rem', marginTop: '1.2rem' }}>👇</span>
+    <DarkHeadingThree>
+      <FormattedMessage
+        id="about.githubRepos"
+        defaultMessage="Github repos"
+      />
+    </DarkHeadingThree>
     <GithubRepos>
-      <GithubRepo href="//github.com/ErikCupal/the-black-cat-client" target="_blank">Client</GithubRepo>
-      <GithubRepo href="//github.com/ErikCupal/the-black-cat-server" target="_blank">Server</GithubRepo>
+      <BigLink href="//github.com/ErikCupal/the-black-cat-client" target="_blank">
+        <FormattedMessage
+          id="about.client"
+          defaultMessage="Client"
+        />
+      </BigLink>
+      <BigLink href="//github.com/ErikCupal/the-black-cat-server" target="_blank">
+        <FormattedMessage
+          id="about.server"
+          defaultMessage="Server"
+        />
+      </BigLink>
     </GithubRepos>
-    <SubHeading>Code documentation</SubHeading>
-    <CodeDocLinks>
-      <GithubRepo href="doc/server/" target="_blank">Server</GithubRepo>
-      <GithubRepo href="doc/client/core/" target="_blank">Client core</GithubRepo>
-      <GithubRepo href="doc/client/desktop/" target="_blank">Client launcher</GithubRepo>
-    </CodeDocLinks>
-  </StyledSection>
+    <DarkHeadingThree>
+      <FormattedMessage
+        id="about.codeDocumentation"
+        defaultMessage="Code documentation"
+      />
+    </DarkHeadingThree>
+    <DocCodeLinks>
+      <BigLink href="doc/server/" target="_blank">
+        <FormattedMessage
+          id="about.server"
+          defaultMessage="Server"
+        />
+      </BigLink>
+      <BigLink href="doc/client/core/" target="_blank">
+        <FormattedMessage
+          id="about.clientCore"
+          defaultMessage="Client core"
+        />
+      </BigLink>
+      <BigLink href="doc/client/desktop/" target="_blank">
+        <FormattedMessage
+          id="about.clientLauncher"
+          defaultMessage="Client launcher"
+        />
+      </BigLink>
+    </DocCodeLinks>
+  </LightSection>
 )
 
 export default ForDevs

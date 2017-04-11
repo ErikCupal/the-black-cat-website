@@ -1,21 +1,22 @@
-import { h1 } from 'stylish-components/lib'
-import { extend } from 'stylish-components'
-import Section from './Section'
+import LightSection from './LightSection'
+import styled from 'styled-components'
+import { FormattedMessage } from 'react-intl'
 
-const StyledSection = extend(Section)([{
-  height: 200,
-}])
-
-const Heading = h1([{
-  fontSize: '2.5em',
-  lineHeight: '1.5em',
-  textAlign: 'center',
-}])
+const Heading = styled.h1`
+  font-size: 2.5em;
+  line-height: 1.5em;
+  text-align: center;
+`
 
 const Intro = () => (
-  <StyledSection>
-    <Heading>Online multiplayer card game 🃏</Heading>
-  </StyledSection>
+  <LightSection style={{ height: 200 }}>
+    <Heading>
+      <FormattedMessage
+        id="about.introMessage"
+        defaultMessage="Online multiplayer card game 🃏"
+      />
+    </Heading>
+  </LightSection>
 )
 
 export default Intro

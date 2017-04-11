@@ -1,10 +1,10 @@
 import Koa from 'koa'
-import createRouter from 'koa-router'
+import Router from 'koa-router'
 import serve from 'koa-static'
 import send from 'koa-send'
 import mount from 'koa-mount'
 import webpackMiddleware from 'koa-2-webpack'
-const router = new createRouter()
+const router = new Router()
 
 import universal from './middlewares/universal'
 import requestLogger from './middlewares/requestLogger'

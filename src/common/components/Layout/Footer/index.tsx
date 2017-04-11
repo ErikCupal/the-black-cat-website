@@ -1,24 +1,21 @@
-import { bisque, span } from 'stylish-components/lib'
-import { footer } from 'stylish-components'
+import styled from 'styled-components'
 
-const StyledFooter = footer([
-  {
-    backgroundColor: 'rgba(0, 0, 0, 0.8)',
+const StyledFooter = styled.footer`
+  background-color: rgba(0, 0, 0, 0.8);
 
-    height: 75,
+  height: 75px;
 
-    display: 'flex',
-    flex: '0 0 auto',
-    flexWrap: 'wrap',
-    justifyContent: 'center',
-    alignItems: 'center',
-    textAlign: 'center',
-  },
-])
+  display: flex;
+  flex: 0 0 auto;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+`
 
-const FooterText = span([{
-  color: bisque,
-}])
+const FooterText = styled.span`
+  color: lemonchiffon;
+`
 
 const Footer = () => (
   <StyledFooter>
