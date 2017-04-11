@@ -1,0 +1,394 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>CardsContainer - core</title>
+<link rel="stylesheet" href="..\..\..\style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">core</a>&nbsp;/&nbsp;<a href="../index.html">com.erikcupal.theblackcatclient.gameObjects</a>&nbsp;/&nbsp;<a href=".">CardsContainer</a><br/>
+<br/>
+<h1>CardsContainer</h1>
+<code><span class="keyword">class </span><span class="identifier">CardsContainer</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../com.erikcupal.theblackcatclient.gui/-group-base/index.html"><span class="identifier">GroupBase</span></a></code>
+<p>Contains all [<a href="../-card-object/index.html">CardObject</a>] objects and [<a href="../-i-cards-object/index.html">ICardsObject</a>] objects like hand, grill, etc.</p>
+<p>Transforms cards from one [<a href="../-i-cards-object/index.html">ICardsObject</a>] to another.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<a href="-init-.html">&lt;init&gt;</a></td>
+<td>
+<code><span class="identifier">CardsContainer</span><span class="symbol">(</span><span class="identifier" id="com.erikcupal.theblackcatclient.gameObjects.CardsContainer$<init>(com.erikcupal.theblackcatclient.core.GameCore)/game">game</span><span class="symbol">:</span>&nbsp;<a href="../../com.erikcupal.theblackcatclient.core/-game-core/index.html"><span class="identifier">GameCore</span></a><span class="symbol">)</span></code>
+<p>Contains all [<a href="../-card-object/index.html">CardObject</a>] objects and [<a href="../-i-cards-object/index.html">ICardsObject</a>] objects like hand, grill, etc.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<a href="allowed-card-selection.html">allowedCardSelection</a></td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">allowedCardSelection</span><span class="symbol">: </span><a href="../../com.erikcupal.theblackcatclient.types/-allowed-card-selection/index.html"><span class="identifier">AllowedCardSelection</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<a href="bottom-grill.html">bottomGrill</a></td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">bottomGrill</span><span class="symbol">: </span><a href="../-grill-object/index.html"><span class="identifier">GrillObject</span></a></code></td>
+</tr>
+<tr>
+<td>
+<a href="bottom-hand.html">bottomHand</a></td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">bottomHand</span><span class="symbol">: </span><a href="../-hand-object/index.html"><span class="identifier">HandObject</span></a></code></td>
+</tr>
+<tr>
+<td>
+<a href="bottom-hand-over.html">bottomHandOver</a></td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">bottomHandOver</span><span class="symbol">: </span><a href="../-hand-over-object/index.html"><span class="identifier">HandOverObject</span></a></code></td>
+</tr>
+<tr>
+<td>
+<a href="bottom-pile.html">bottomPile</a></td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">bottomPile</span><span class="symbol">: </span><a href="../-pile-object/index.html"><span class="identifier">PileObject</span></a></code></td>
+</tr>
+<tr>
+<td>
+<a href="cards.html">cards</a></td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">cards</span><span class="symbol">: </span><span class="identifier">List</span><span class="symbol">&lt;</span><a href="../-card-object/index.html"><span class="identifier">CardObject</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<a href="deck.html">deck</a></td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">deck</span><span class="symbol">: </span><a href="../-deck-object/index.html"><span class="identifier">DeckObject</span></a></code></td>
+</tr>
+<tr>
+<td>
+<a href="is-black-cat.html">isBlackCat</a></td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">isBlackCat</span><span class="symbol">: </span><span class="symbol">(</span><a href="../../com.erikcupal.theblackcatclient.types/-i-card/index.html"><span class="identifier">ICard</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<a href="is-of-suit.html">isOfSuit</a></td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">isOfSuit</span><span class="symbol">: </span><span class="symbol">(</span><a href="../../com.erikcupal.theblackcatclient.types/-suit/index.html"><span class="identifier">Suit</span></a><span class="symbol">?</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<span class="symbol">(</span><a href="../../com.erikcupal.theblackcatclient.types/-i-card/index.html"><span class="identifier">ICard</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<a href="is-same-card.html">isSameCard</a></td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">isSameCard</span><span class="symbol">: </span><span class="symbol">(</span><a href="../../com.erikcupal.theblackcatclient.types/-i-card/index.html"><span class="identifier">ICard</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<span class="symbol">(</span><a href="../../com.erikcupal.theblackcatclient.types/-i-card/index.html"><span class="identifier">ICard</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<a href="left-grill.html">leftGrill</a></td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">leftGrill</span><span class="symbol">: </span><a href="../-grill-object/index.html"><span class="identifier">GrillObject</span></a></code></td>
+</tr>
+<tr>
+<td>
+<a href="left-hand.html">leftHand</a></td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">leftHand</span><span class="symbol">: </span><a href="../-hand-object/index.html"><span class="identifier">HandObject</span></a></code></td>
+</tr>
+<tr>
+<td>
+<a href="left-hand-over.html">leftHandOver</a></td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">leftHandOver</span><span class="symbol">: </span><a href="../-hand-over-object/index.html"><span class="identifier">HandOverObject</span></a></code></td>
+</tr>
+<tr>
+<td>
+<a href="left-pile.html">leftPile</a></td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">leftPile</span><span class="symbol">: </span><a href="../-pile-object/index.html"><span class="identifier">PileObject</span></a></code></td>
+</tr>
+<tr>
+<td>
+<a href="right-grill.html">rightGrill</a></td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">rightGrill</span><span class="symbol">: </span><a href="../-grill-object/index.html"><span class="identifier">GrillObject</span></a></code></td>
+</tr>
+<tr>
+<td>
+<a href="right-hand.html">rightHand</a></td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">rightHand</span><span class="symbol">: </span><a href="../-hand-object/index.html"><span class="identifier">HandObject</span></a></code></td>
+</tr>
+<tr>
+<td>
+<a href="right-hand-over.html">rightHandOver</a></td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">rightHandOver</span><span class="symbol">: </span><a href="../-hand-over-object/index.html"><span class="identifier">HandOverObject</span></a></code></td>
+</tr>
+<tr>
+<td>
+<a href="right-pile.html">rightPile</a></td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">rightPile</span><span class="symbol">: </span><a href="../-pile-object/index.html"><span class="identifier">PileObject</span></a></code></td>
+</tr>
+<tr>
+<td>
+<a href="selected-cards.html">selectedCards</a></td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">selectedCards</span><span class="symbol">: </span><span class="identifier">List</span><span class="symbol">&lt;</span><a href="../-card-object/index.html"><span class="identifier">CardObject</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<a href="table.html">table</a></td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">table</span><span class="symbol">: </span><a href="../-table-object/index.html"><span class="identifier">TableObject</span></a></code></td>
+</tr>
+<tr>
+<td>
+<a href="top-grill.html">topGrill</a></td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">topGrill</span><span class="symbol">: </span><a href="../-grill-object/index.html"><span class="identifier">GrillObject</span></a></code></td>
+</tr>
+<tr>
+<td>
+<a href="top-hand.html">topHand</a></td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">topHand</span><span class="symbol">: </span><a href="../-hand-object/index.html"><span class="identifier">HandObject</span></a></code></td>
+</tr>
+<tr>
+<td>
+<a href="top-hand-over.html">topHandOver</a></td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">topHandOver</span><span class="symbol">: </span><a href="../-hand-over-object/index.html"><span class="identifier">HandOverObject</span></a></code></td>
+</tr>
+<tr>
+<td>
+<a href="top-pile.html">topPile</a></td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">topPile</span><span class="symbol">: </span><a href="../-pile-object/index.html"><span class="identifier">PileObject</span></a></code></td>
+</tr>
+<tr>
+<td>
+<a href="trick.html">trick</a></td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">trick</span><span class="symbol">: </span><a href="../-trick-object/index.html"><span class="identifier">TrickObject</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<a href="../../com.erikcupal.theblackcatclient.gui/-group-base/assets.html">assets</a></td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">assets</span><span class="symbol">: </span><a href="../../com.erikcupal.theblackcatclient.assets/-assets/index.html"><span class="identifier">Assets</span></a></code></td>
+</tr>
+<tr>
+<td>
+<a href="../../com.erikcupal.theblackcatclient.gui/-group-base/messages.html">messages</a></td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">messages</span><span class="symbol">: </span><span class="identifier">SerializedSubject</span><span class="symbol">&lt;</span><span class="identifier">Any</span><span class="symbol">,</span>&nbsp;<span class="identifier">Any</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<a href="../../com.erikcupal.theblackcatclient.gui/-group-base/state.html">state</a></td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">state</span><span class="symbol">: </span><a href="../../com.erikcupal.theblackcatclient.types/-state/index.html"><span class="identifier">State</span></a></code></td>
+</tr>
+<tr>
+<td>
+<a href="../../com.erikcupal.theblackcatclient.gui/-group-base/style.html">style</a></td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">style</span><span class="symbol">: </span><a href="../../com.erikcupal.theblackcatclient.assets/-styles/index.html"><span class="identifier">Styles</span></a></code></td>
+</tr>
+<tr>
+<td>
+<a href="../../com.erikcupal.theblackcatclient.gui/-group-base/subscription.html">subscription</a></td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">subscription</span><span class="symbol">: </span><span class="identifier">CompositeSubscription</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<a href="can-cards-be-send.html">canCardsBeSend</a></td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">canCardsBeSend</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<a href="card-is-playable.html">cardIsPlayable</a></td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">cardIsPlayable</span><span class="symbol">(</span><span class="identifier" id="com.erikcupal.theblackcatclient.gameObjects.CardsContainer$cardIsPlayable(com.erikcupal.theblackcatclient.types.ICard)/card">card</span><span class="symbol">:</span>&nbsp;<a href="../../com.erikcupal.theblackcatclient.types/-i-card/index.html"><span class="identifier">ICard</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<a href="cards-to-deck.html">cardsToDeck</a></td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">cardsToDeck</span><span class="symbol">(</span><span class="identifier" id="com.erikcupal.theblackcatclient.gameObjects.CardsContainer$cardsToDeck(kotlin.Float)/duration">duration</span><span class="symbol">:</span>&nbsp;<span class="identifier">Float</span>&nbsp;<span class="symbol">=</span>&nbsp;1f<span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<a href="collect-trick.html">collectTrick</a></td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">collectTrick</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<a href="deal-cards.html">dealCards</a></td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">dealCards</span><span class="symbol">(</span><span class="identifier" id="com.erikcupal.theblackcatclient.gameObjects.CardsContainer$dealCards(kotlin.collections.List((com.erikcupal.theblackcatclient.types.Card)))/playerHand">playerHand</span><span class="symbol">:</span>&nbsp;<span class="identifier">List</span><span class="symbol">&lt;</span><a href="../../com.erikcupal.theblackcatclient.types/-card/index.html"><span class="identifier">Card</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<a href="dispose.html">dispose</a></td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">dispose</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<a href="grill-cards.html">grillCards</a></td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">grillCards</span><span class="symbol">(</span><span class="identifier" id="com.erikcupal.theblackcatclient.gameObjects.CardsContainer$grillCards(kotlin.collections.List((com.erikcupal.theblackcatclient.types.Card)), com.erikcupal.theblackcatclient.types.PlayerSide)/grill">grill</span><span class="symbol">:</span>&nbsp;<span class="identifier">List</span><span class="symbol">&lt;</span><a href="../../com.erikcupal.theblackcatclient.types/-card/index.html"><span class="identifier">Card</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier" id="com.erikcupal.theblackcatclient.gameObjects.CardsContainer$grillCards(kotlin.collections.List((com.erikcupal.theblackcatclient.types.Card)), com.erikcupal.theblackcatclient.types.PlayerSide)/player">player</span><span class="symbol">:</span>&nbsp;<a href="../../com.erikcupal.theblackcatclient.types/-player-side/index.html"><span class="identifier">PlayerSide</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<a href="grill-is-valid.html">grillIsValid</a></td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">grillIsValid</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<a href="hand-over-is-valid.html">handOverIsValid</a></td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">handOverIsValid</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<a href="order.html">order</a></td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">order</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<a href="pass-hand-over.html">passHandOver</a></td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">passHandOver</span><span class="symbol">(</span><span class="identifier" id="com.erikcupal.theblackcatclient.gameObjects.CardsContainer$passHandOver(kotlin.collections.Collection((com.erikcupal.theblackcatclient.types.Card)), com.erikcupal.theblackcatclient.types.PlayerSide)/handOver">handOver</span><span class="symbol">:</span>&nbsp;<span class="identifier">Collection</span><span class="symbol">&lt;</span><a href="../../com.erikcupal.theblackcatclient.types/-card/index.html"><span class="identifier">Card</span></a><span class="symbol">&gt;</span><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="com.erikcupal.theblackcatclient.gameObjects.CardsContainer$passHandOver(kotlin.collections.Collection((com.erikcupal.theblackcatclient.types.Card)), com.erikcupal.theblackcatclient.types.PlayerSide)/from">from</span><span class="symbol">:</span>&nbsp;<a href="../../com.erikcupal.theblackcatclient.types/-player-side/index.html"><span class="identifier">PlayerSide</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<a href="play-card.html">playCard</a></td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">playCard</span><span class="symbol">(</span><span class="identifier" id="com.erikcupal.theblackcatclient.gameObjects.CardsContainer$playCard(com.erikcupal.theblackcatclient.types.Card, com.erikcupal.theblackcatclient.types.PlayerSide, kotlin.Boolean)/card">card</span><span class="symbol">:</span>&nbsp;<a href="../../com.erikcupal.theblackcatclient.types/-card/index.html"><span class="identifier">Card</span></a><span class="symbol">, </span><span class="identifier" id="com.erikcupal.theblackcatclient.gameObjects.CardsContainer$playCard(com.erikcupal.theblackcatclient.types.Card, com.erikcupal.theblackcatclient.types.PlayerSide, kotlin.Boolean)/player">player</span><span class="symbol">:</span>&nbsp;<a href="../../com.erikcupal.theblackcatclient.types/-player-side/index.html"><span class="identifier">PlayerSide</span></a><span class="symbol">, </span><span class="identifier" id="com.erikcupal.theblackcatclient.gameObjects.CardsContainer$playCard(com.erikcupal.theblackcatclient.types.Card, com.erikcupal.theblackcatclient.types.PlayerSide, kotlin.Boolean)/fromGrill">fromGrill</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span>&nbsp;<span class="symbol">=</span>&nbsp;false<span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<a href="take-hand-over.html">takeHandOver</a></td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">takeHandOver</span><span class="symbol">(</span><span class="identifier" id="com.erikcupal.theblackcatclient.gameObjects.CardsContainer$takeHandOver(kotlin.collections.List((com.erikcupal.theblackcatclient.types.Card)), com.erikcupal.theblackcatclient.types.PlayerSide)/handOver">handOver</span><span class="symbol">:</span>&nbsp;<span class="identifier">List</span><span class="symbol">&lt;</span><a href="../../com.erikcupal.theblackcatclient.types/-card/index.html"><span class="identifier">Card</span></a><span class="symbol">&gt;</span><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="com.erikcupal.theblackcatclient.gameObjects.CardsContainer$takeHandOver(kotlin.collections.List((com.erikcupal.theblackcatclient.types.Card)), com.erikcupal.theblackcatclient.types.PlayerSide)/player">player</span><span class="symbol">:</span>&nbsp;<a href="../../com.erikcupal.theblackcatclient.types/-player-side/index.html"><span class="identifier">PlayerSide</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<a href="transform-card.html">transformCard</a></td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">transformCard</span><span class="symbol">(</span><span class="identifier" id="com.erikcupal.theblackcatclient.gameObjects.CardsContainer$transformCard(com.erikcupal.theblackcatclient.gameObjects.CardObject, com.erikcupal.theblackcatclient.gameObjects.ICardsObject, com.erikcupal.theblackcatclient.gameObjects.ICardsObject, kotlin.Float, com.erikcupal.theblackcatclient.types.CardValueChange)/card">card</span><span class="symbol">:</span>&nbsp;<a href="../-card-object/index.html"><span class="identifier">CardObject</span></a><span class="symbol">, </span><span class="identifier" id="com.erikcupal.theblackcatclient.gameObjects.CardsContainer$transformCard(com.erikcupal.theblackcatclient.gameObjects.CardObject, com.erikcupal.theblackcatclient.gameObjects.ICardsObject, com.erikcupal.theblackcatclient.gameObjects.ICardsObject, kotlin.Float, com.erikcupal.theblackcatclient.types.CardValueChange)/from">from</span><span class="symbol">:</span>&nbsp;<a href="../-i-cards-object/index.html"><span class="identifier">ICardsObject</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="com.erikcupal.theblackcatclient.gameObjects.CardsContainer$transformCard(com.erikcupal.theblackcatclient.gameObjects.CardObject, com.erikcupal.theblackcatclient.gameObjects.ICardsObject, com.erikcupal.theblackcatclient.gameObjects.ICardsObject, kotlin.Float, com.erikcupal.theblackcatclient.types.CardValueChange)/to">to</span><span class="symbol">:</span>&nbsp;<a href="../-i-cards-object/index.html"><span class="identifier">ICardsObject</span></a><span class="symbol">, </span><span class="identifier" id="com.erikcupal.theblackcatclient.gameObjects.CardsContainer$transformCard(com.erikcupal.theblackcatclient.gameObjects.CardObject, com.erikcupal.theblackcatclient.gameObjects.ICardsObject, com.erikcupal.theblackcatclient.gameObjects.ICardsObject, kotlin.Float, com.erikcupal.theblackcatclient.types.CardValueChange)/duration">duration</span><span class="symbol">:</span>&nbsp;<span class="identifier">Float</span>&nbsp;<span class="symbol">=</span>&nbsp;0f<span class="symbol">, </span><span class="identifier" id="com.erikcupal.theblackcatclient.gameObjects.CardsContainer$transformCard(com.erikcupal.theblackcatclient.gameObjects.CardObject, com.erikcupal.theblackcatclient.gameObjects.ICardsObject, com.erikcupal.theblackcatclient.gameObjects.ICardsObject, kotlin.Float, com.erikcupal.theblackcatclient.types.CardValueChange)/valueChange">valueChange</span><span class="symbol">:</span>&nbsp;<a href="../../com.erikcupal.theblackcatclient.types/-card-value-change/index.html"><span class="identifier">CardValueChange</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<a href="transform-deck-card.html">transformDeckCard</a></td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">transformDeckCard</span><span class="symbol">(</span><span class="identifier" id="com.erikcupal.theblackcatclient.gameObjects.CardsContainer$transformDeckCard(com.erikcupal.theblackcatclient.gameObjects.CardObject, com.erikcupal.theblackcatclient.gameObjects.ICardsObject, com.erikcupal.theblackcatclient.gameObjects.ICardsObject, kotlin.Float, com.erikcupal.theblackcatclient.types.CardValueChange)/card">card</span><span class="symbol">:</span>&nbsp;<a href="../-card-object/index.html"><span class="identifier">CardObject</span></a><span class="symbol">, </span><span class="identifier" id="com.erikcupal.theblackcatclient.gameObjects.CardsContainer$transformDeckCard(com.erikcupal.theblackcatclient.gameObjects.CardObject, com.erikcupal.theblackcatclient.gameObjects.ICardsObject, com.erikcupal.theblackcatclient.gameObjects.ICardsObject, kotlin.Float, com.erikcupal.theblackcatclient.types.CardValueChange)/from">from</span><span class="symbol">:</span>&nbsp;<a href="../-i-cards-object/index.html"><span class="identifier">ICardsObject</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="com.erikcupal.theblackcatclient.gameObjects.CardsContainer$transformDeckCard(com.erikcupal.theblackcatclient.gameObjects.CardObject, com.erikcupal.theblackcatclient.gameObjects.ICardsObject, com.erikcupal.theblackcatclient.gameObjects.ICardsObject, kotlin.Float, com.erikcupal.theblackcatclient.types.CardValueChange)/to">to</span><span class="symbol">:</span>&nbsp;<a href="../-i-cards-object/index.html"><span class="identifier">ICardsObject</span></a><span class="symbol">, </span><span class="identifier" id="com.erikcupal.theblackcatclient.gameObjects.CardsContainer$transformDeckCard(com.erikcupal.theblackcatclient.gameObjects.CardObject, com.erikcupal.theblackcatclient.gameObjects.ICardsObject, com.erikcupal.theblackcatclient.gameObjects.ICardsObject, kotlin.Float, com.erikcupal.theblackcatclient.types.CardValueChange)/duration">duration</span><span class="symbol">:</span>&nbsp;<span class="identifier">Float</span>&nbsp;<span class="symbol">=</span>&nbsp;0f<span class="symbol">, </span><span class="identifier" id="com.erikcupal.theblackcatclient.gameObjects.CardsContainer$transformDeckCard(com.erikcupal.theblackcatclient.gameObjects.CardObject, com.erikcupal.theblackcatclient.gameObjects.ICardsObject, com.erikcupal.theblackcatclient.gameObjects.ICardsObject, kotlin.Float, com.erikcupal.theblackcatclient.types.CardValueChange)/valueChange">valueChange</span><span class="symbol">:</span>&nbsp;<a href="../../com.erikcupal.theblackcatclient.types/-card-value-change/index.html"><span class="identifier">CardValueChange</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<a href="trick-to-pile.html">trickToPile</a></td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">trickToPile</span><span class="symbol">(</span><span class="identifier" id="com.erikcupal.theblackcatclient.gameObjects.CardsContainer$trickToPile(com.erikcupal.theblackcatclient.types.PlayerSide)/player">player</span><span class="symbol">:</span>&nbsp;<a href="../../com.erikcupal.theblackcatclient.types/-player-side/index.html"><span class="identifier">PlayerSide</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Extension Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<a href="../../com.erikcupal.theblackcatclient.helpers/com.badlogic.gdx.scenes.scene2d.-actor/add-action.html">addAction</a></td>
+<td>
+<code><span class="keyword">infix</span> <span class="keyword">fun </span><span class="identifier">Actor</span><span class="symbol">.</span><span class="identifier">addAction</span><span class="symbol">(</span><span class="identifier" id="com.erikcupal.theblackcatclient.helpers$addAction(com.badlogic.gdx.scenes.scene2d.Actor, com.badlogic.gdx.scenes.scene2d.Action)/action">action</span><span class="symbol">:</span>&nbsp;<span class="identifier">Action</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Adds an action to the actor</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../../com.erikcupal.theblackcatclient.helpers/com.badlogic.gdx.scenes.scene2d.-actor/center.html">center</a></td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">Actor</span><span class="symbol">.</span><span class="identifier">center</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<a href="../../com.erikcupal.theblackcatclient.helpers/com.badlogic.gdx.scenes.scene2d.-actor/hide.html">hide</a></td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">Actor</span><span class="symbol">.</span><span class="identifier">hide</span><span class="symbol">(</span><span class="identifier" id="com.erikcupal.theblackcatclient.helpers$hide(com.badlogic.gdx.scenes.scene2d.Actor, kotlin.Float, com.badlogic.gdx.math.Interpolation)/time">time</span><span class="symbol">:</span>&nbsp;<span class="identifier">Float</span>&nbsp;<span class="symbol">=</span>&nbsp;0.5f<span class="symbol">, </span><span class="identifier" id="com.erikcupal.theblackcatclient.helpers$hide(com.badlogic.gdx.scenes.scene2d.Actor, kotlin.Float, com.badlogic.gdx.math.Interpolation)/interpolation">interpolation</span><span class="symbol">:</span>&nbsp;<span class="identifier">Interpolation</span>&nbsp;<span class="symbol">=</span>&nbsp;fade<span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<a href="../../com.erikcupal.theblackcatclient.helpers/com.badlogic.gdx.scenes.scene2d.-group/minus-assign.html">minusAssign</a></td>
+<td>
+<code><span class="keyword">operator</span> <span class="keyword">fun </span><span class="identifier">Group</span><span class="symbol">.</span><span class="identifier">minusAssign</span><span class="symbol">(</span><span class="identifier" id="com.erikcupal.theblackcatclient.helpers$minusAssign(com.badlogic.gdx.scenes.scene2d.Group, com.badlogic.gdx.scenes.scene2d.Actor)/actor">actor</span><span class="symbol">:</span>&nbsp;<span class="identifier">Actor</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Removes an actor from the group</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../../com.erikcupal.theblackcatclient.helpers/com.badlogic.gdx.scenes.scene2d.-actor/on-mouse-enter.html">onMouseEnter</a></td>
+<td>
+<code><span class="keyword">infix</span> <span class="keyword">fun </span><span class="identifier">Actor</span><span class="symbol">.</span><span class="identifier">onMouseEnter</span><span class="symbol">(</span><span class="identifier" id="com.erikcupal.theblackcatclient.helpers$onMouseEnter(com.badlogic.gdx.scenes.scene2d.Actor, kotlin.Function1((com.badlogic.gdx.scenes.scene2d.Actor, kotlin.Unit)))/callback">callback</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><span class="identifier">Actor</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<span class="identifier">Unit</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<a href="../../com.erikcupal.theblackcatclient.helpers/com.badlogic.gdx.scenes.scene2d.-actor/on-mouse-exit.html">onMouseExit</a></td>
+<td>
+<code><span class="keyword">infix</span> <span class="keyword">fun </span><span class="identifier">Actor</span><span class="symbol">.</span><span class="identifier">onMouseExit</span><span class="symbol">(</span><span class="identifier" id="com.erikcupal.theblackcatclient.helpers$onMouseExit(com.badlogic.gdx.scenes.scene2d.Actor, kotlin.Function1((com.badlogic.gdx.scenes.scene2d.Actor, kotlin.Unit)))/callback">callback</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><span class="identifier">Actor</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<span class="identifier">Unit</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<a href="../../com.erikcupal.theblackcatclient.helpers/com.badlogic.gdx.scenes.scene2d.-actor/on-tap.html">onTap</a></td>
+<td>
+<code><span class="keyword">infix</span> <span class="keyword">fun </span><span class="identifier">Actor</span><span class="symbol">.</span><span class="identifier">onTap</span><span class="symbol">(</span><span class="identifier" id="com.erikcupal.theblackcatclient.helpers$onTap(com.badlogic.gdx.scenes.scene2d.Actor, kotlin.Function1((com.badlogic.gdx.scenes.scene2d.Actor, kotlin.Unit)))/callback">callback</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><span class="identifier">Actor</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<span class="identifier">Unit</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Scene2D helpers</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../../com.erikcupal.theblackcatclient.helpers/com.badlogic.gdx.scenes.scene2d.-group/plus-assign.html">plusAssign</a></td>
+<td>
+<code><span class="keyword">operator</span> <span class="keyword">fun </span><span class="identifier">Group</span><span class="symbol">.</span><span class="identifier">plusAssign</span><span class="symbol">(</span><span class="identifier" id="com.erikcupal.theblackcatclient.helpers$plusAssign(com.badlogic.gdx.scenes.scene2d.Group, com.badlogic.gdx.scenes.scene2d.Actor)/actor">actor</span><span class="symbol">:</span>&nbsp;<span class="identifier">Actor</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Adds an actor to the group</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../../com.erikcupal.theblackcatclient.helpers/com.badlogic.gdx.scenes.scene2d.-actor/remove-action.html">removeAction</a></td>
+<td>
+<code><span class="keyword">infix</span> <span class="keyword">fun </span><span class="identifier">Actor</span><span class="symbol">.</span><span class="identifier">removeAction</span><span class="symbol">(</span><span class="identifier" id="com.erikcupal.theblackcatclient.helpers$removeAction(com.badlogic.gdx.scenes.scene2d.Actor, com.badlogic.gdx.scenes.scene2d.Action)/action">action</span><span class="symbol">:</span>&nbsp;<span class="identifier">Action</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Removes an action from the actor</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../../com.erikcupal.theblackcatclient.helpers/com.badlogic.gdx.scenes.scene2d.-actor/show.html">show</a></td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">Actor</span><span class="symbol">.</span><span class="identifier">show</span><span class="symbol">(</span><span class="identifier" id="com.erikcupal.theblackcatclient.helpers$show(com.badlogic.gdx.scenes.scene2d.Actor, kotlin.Float, com.badlogic.gdx.math.Interpolation)/time">time</span><span class="symbol">:</span>&nbsp;<span class="identifier">Float</span>&nbsp;<span class="symbol">=</span>&nbsp;0.5f<span class="symbol">, </span><span class="identifier" id="com.erikcupal.theblackcatclient.helpers$show(com.badlogic.gdx.scenes.scene2d.Actor, kotlin.Float, com.badlogic.gdx.math.Interpolation)/interpolation">interpolation</span><span class="symbol">:</span>&nbsp;<span class="identifier">Interpolation</span>&nbsp;<span class="symbol">=</span>&nbsp;fade<span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

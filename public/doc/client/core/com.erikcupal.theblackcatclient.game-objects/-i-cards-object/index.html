@@ -1,0 +1,107 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>ICardsObject - core</title>
+<link rel="stylesheet" href="..\..\..\style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">core</a>&nbsp;/&nbsp;<a href="../index.html">com.erikcupal.theblackcatclient.gameObjects</a>&nbsp;/&nbsp;<a href=".">ICardsObject</a><br/>
+<br/>
+<h1>ICardsObject</h1>
+<code><span class="keyword">interface </span><span class="identifier">ICardsObject</span></code>
+<p>Card object interface with [<a href="update-card.html">updateCard</a>] method</p>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<a href="cards.html">cards</a></td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">var </span><span class="identifier">cards</span><span class="symbol">: </span><span class="identifier">MutableList</span><span class="symbol">&lt;</span><a href="../-card-object/index.html"><span class="identifier">CardObject</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<a href="minus-assign.html">minusAssign</a></td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">operator</span> <span class="keyword">fun </span><span class="identifier">minusAssign</span><span class="symbol">(</span><span class="identifier" id="com.erikcupal.theblackcatclient.gameObjects.ICardsObject$minusAssign(com.erikcupal.theblackcatclient.gameObjects.CardObject)/card">card</span><span class="symbol">:</span>&nbsp;<a href="../-card-object/index.html"><span class="identifier">CardObject</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<a href="plus-assign.html">plusAssign</a></td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">operator</span> <span class="keyword">fun </span><span class="identifier">plusAssign</span><span class="symbol">(</span><span class="identifier" id="com.erikcupal.theblackcatclient.gameObjects.ICardsObject$plusAssign(com.erikcupal.theblackcatclient.gameObjects.CardObject)/card">card</span><span class="symbol">:</span>&nbsp;<a href="../-card-object/index.html"><span class="identifier">CardObject</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<a href="update-card.html">updateCard</a></td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">updateCard</span><span class="symbol">(</span><span class="identifier" id="com.erikcupal.theblackcatclient.gameObjects.ICardsObject$updateCard(kotlin.Int, kotlin.Float, com.erikcupal.theblackcatclient.types.CardValueChange, kotlin.Boolean)/index">index</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">, </span><span class="identifier" id="com.erikcupal.theblackcatclient.gameObjects.ICardsObject$updateCard(kotlin.Int, kotlin.Float, com.erikcupal.theblackcatclient.types.CardValueChange, kotlin.Boolean)/duration">duration</span><span class="symbol">:</span>&nbsp;<span class="identifier">Float</span><span class="symbol">, </span><span class="identifier" id="com.erikcupal.theblackcatclient.gameObjects.ICardsObject$updateCard(kotlin.Int, kotlin.Float, com.erikcupal.theblackcatclient.types.CardValueChange, kotlin.Boolean)/valueChange">valueChange</span><span class="symbol">:</span>&nbsp;<a href="../../com.erikcupal.theblackcatclient.types/-card-value-change/index.html"><span class="identifier">CardValueChange</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="com.erikcupal.theblackcatclient.gameObjects.ICardsObject$updateCard(kotlin.Int, kotlin.Float, com.erikcupal.theblackcatclient.types.CardValueChange, kotlin.Boolean)/noScaling">noScaling</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span>&nbsp;<span class="symbol">=</span>&nbsp;false<span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<a href="update-cards.html">updateCards</a></td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">updateCards</span><span class="symbol">(</span><span class="identifier" id="com.erikcupal.theblackcatclient.gameObjects.ICardsObject$updateCards(kotlin.Float, com.erikcupal.theblackcatclient.gameObjects.CardObject)/duration">duration</span><span class="symbol">:</span>&nbsp;<span class="identifier">Float</span><span class="symbol">, </span><span class="identifier" id="com.erikcupal.theblackcatclient.gameObjects.ICardsObject$updateCards(kotlin.Float, com.erikcupal.theblackcatclient.gameObjects.CardObject)/except">except</span><span class="symbol">:</span>&nbsp;<a href="../-card-object/index.html"><span class="identifier">CardObject</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<a href="../-deck-object/index.html">DeckObject</a></td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">DeckObject</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ICardsObject</span></code>
+<p>Deck object that implements [ICardsObject]</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../-hand-object/index.html">HandObject</a></td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">HandObject</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ICardsObject</span></code>
+<p>Hand object that implements [ICardsObject]</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../-hand-over-object/index.html">HandOverObject</a></td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">HandOverObject</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ICardsObject</span></code>
+<p>HandOver object that implements [ICardsObject]</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../-pile-object/index.html">PileObject</a></td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">PileObject</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ICardsObject</span></code>
+<p>Pile object that implements [ICardsObject]</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../-table-object/index.html">TableObject</a></td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">TableObject</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ICardsObject</span></code>
+<p>Table object that implements [ICardsObject]</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../-trick-object/index.html">TrickObject</a></td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">TrickObject</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ICardsObject</span></code>
+<p>Trick object that implements [ICardsObject]</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

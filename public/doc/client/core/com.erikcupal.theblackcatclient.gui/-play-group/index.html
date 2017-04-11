@@ -1,0 +1,177 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>PlayGroup - core</title>
+<link rel="stylesheet" href="..\..\..\style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">core</a>&nbsp;/&nbsp;<a href="../index.html">com.erikcupal.theblackcatclient.gui</a>&nbsp;/&nbsp;<a href=".">PlayGroup</a><br/>
+<br/>
+<h1>PlayGroup</h1>
+<code><span class="keyword">class </span><span class="identifier">PlayGroup</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-group-base/index.html"><span class="identifier">GroupBase</span></a></code>
+<p>Group with table picture, cards and gameplay buttons</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<a href="-init-.html">&lt;init&gt;</a></td>
+<td>
+<code><span class="identifier">PlayGroup</span><span class="symbol">(</span><span class="identifier" id="com.erikcupal.theblackcatclient.gui.PlayGroup$<init>(com.erikcupal.theblackcatclient.core.GameCore)/game">game</span><span class="symbol">:</span>&nbsp;<a href="../../com.erikcupal.theblackcatclient.core/-game-core/index.html"><span class="identifier">GameCore</span></a><span class="symbol">)</span></code>
+<p>Group with table picture, cards and gameplay buttons</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<a href="left-player-label.html">leftPlayerLabel</a></td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">leftPlayerLabel</span><span class="symbol">: </span><a href="../-player-name-label/index.html"><span class="identifier">PlayerNameLabel</span></a></code></td>
+</tr>
+<tr>
+<td>
+<a href="right-player-label.html">rightPlayerLabel</a></td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">rightPlayerLabel</span><span class="symbol">: </span><a href="../-player-name-label/index.html"><span class="identifier">PlayerNameLabel</span></a></code></td>
+</tr>
+<tr>
+<td>
+<a href="top-player-label.html">topPlayerLabel</a></td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">topPlayerLabel</span><span class="symbol">: </span><a href="../-player-name-label/index.html"><span class="identifier">PlayerNameLabel</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<a href="../-group-base/assets.html">assets</a></td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">assets</span><span class="symbol">: </span><a href="../../com.erikcupal.theblackcatclient.assets/-assets/index.html"><span class="identifier">Assets</span></a></code></td>
+</tr>
+<tr>
+<td>
+<a href="../-group-base/messages.html">messages</a></td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">messages</span><span class="symbol">: </span><span class="identifier">SerializedSubject</span><span class="symbol">&lt;</span><span class="identifier">Any</span><span class="symbol">,</span>&nbsp;<span class="identifier">Any</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<a href="../-group-base/state.html">state</a></td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">state</span><span class="symbol">: </span><a href="../../com.erikcupal.theblackcatclient.types/-state/index.html"><span class="identifier">State</span></a></code></td>
+</tr>
+<tr>
+<td>
+<a href="../-group-base/style.html">style</a></td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">style</span><span class="symbol">: </span><a href="../../com.erikcupal.theblackcatclient.assets/-styles/index.html"><span class="identifier">Styles</span></a></code></td>
+</tr>
+<tr>
+<td>
+<a href="../-group-base/subscription.html">subscription</a></td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">subscription</span><span class="symbol">: </span><span class="identifier">CompositeSubscription</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<a href="dispose.html">dispose</a></td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">dispose</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<a href="update-player-labels.html">updatePlayerLabels</a></td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">updatePlayerLabels</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Extension Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<a href="../../com.erikcupal.theblackcatclient.helpers/com.badlogic.gdx.scenes.scene2d.-actor/add-action.html">addAction</a></td>
+<td>
+<code><span class="keyword">infix</span> <span class="keyword">fun </span><span class="identifier">Actor</span><span class="symbol">.</span><span class="identifier">addAction</span><span class="symbol">(</span><span class="identifier" id="com.erikcupal.theblackcatclient.helpers$addAction(com.badlogic.gdx.scenes.scene2d.Actor, com.badlogic.gdx.scenes.scene2d.Action)/action">action</span><span class="symbol">:</span>&nbsp;<span class="identifier">Action</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Adds an action to the actor</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../../com.erikcupal.theblackcatclient.helpers/com.badlogic.gdx.scenes.scene2d.-actor/center.html">center</a></td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">Actor</span><span class="symbol">.</span><span class="identifier">center</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<a href="../../com.erikcupal.theblackcatclient.helpers/com.badlogic.gdx.scenes.scene2d.-actor/hide.html">hide</a></td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">Actor</span><span class="symbol">.</span><span class="identifier">hide</span><span class="symbol">(</span><span class="identifier" id="com.erikcupal.theblackcatclient.helpers$hide(com.badlogic.gdx.scenes.scene2d.Actor, kotlin.Float, com.badlogic.gdx.math.Interpolation)/time">time</span><span class="symbol">:</span>&nbsp;<span class="identifier">Float</span>&nbsp;<span class="symbol">=</span>&nbsp;0.5f<span class="symbol">, </span><span class="identifier" id="com.erikcupal.theblackcatclient.helpers$hide(com.badlogic.gdx.scenes.scene2d.Actor, kotlin.Float, com.badlogic.gdx.math.Interpolation)/interpolation">interpolation</span><span class="symbol">:</span>&nbsp;<span class="identifier">Interpolation</span>&nbsp;<span class="symbol">=</span>&nbsp;fade<span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<a href="../../com.erikcupal.theblackcatclient.helpers/com.badlogic.gdx.scenes.scene2d.-group/minus-assign.html">minusAssign</a></td>
+<td>
+<code><span class="keyword">operator</span> <span class="keyword">fun </span><span class="identifier">Group</span><span class="symbol">.</span><span class="identifier">minusAssign</span><span class="symbol">(</span><span class="identifier" id="com.erikcupal.theblackcatclient.helpers$minusAssign(com.badlogic.gdx.scenes.scene2d.Group, com.badlogic.gdx.scenes.scene2d.Actor)/actor">actor</span><span class="symbol">:</span>&nbsp;<span class="identifier">Actor</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Removes an actor from the group</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../../com.erikcupal.theblackcatclient.helpers/com.badlogic.gdx.scenes.scene2d.-actor/on-mouse-enter.html">onMouseEnter</a></td>
+<td>
+<code><span class="keyword">infix</span> <span class="keyword">fun </span><span class="identifier">Actor</span><span class="symbol">.</span><span class="identifier">onMouseEnter</span><span class="symbol">(</span><span class="identifier" id="com.erikcupal.theblackcatclient.helpers$onMouseEnter(com.badlogic.gdx.scenes.scene2d.Actor, kotlin.Function1((com.badlogic.gdx.scenes.scene2d.Actor, kotlin.Unit)))/callback">callback</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><span class="identifier">Actor</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<span class="identifier">Unit</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<a href="../../com.erikcupal.theblackcatclient.helpers/com.badlogic.gdx.scenes.scene2d.-actor/on-mouse-exit.html">onMouseExit</a></td>
+<td>
+<code><span class="keyword">infix</span> <span class="keyword">fun </span><span class="identifier">Actor</span><span class="symbol">.</span><span class="identifier">onMouseExit</span><span class="symbol">(</span><span class="identifier" id="com.erikcupal.theblackcatclient.helpers$onMouseExit(com.badlogic.gdx.scenes.scene2d.Actor, kotlin.Function1((com.badlogic.gdx.scenes.scene2d.Actor, kotlin.Unit)))/callback">callback</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><span class="identifier">Actor</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<span class="identifier">Unit</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+<tr>
+<td>
+<a href="../../com.erikcupal.theblackcatclient.helpers/com.badlogic.gdx.scenes.scene2d.-actor/on-tap.html">onTap</a></td>
+<td>
+<code><span class="keyword">infix</span> <span class="keyword">fun </span><span class="identifier">Actor</span><span class="symbol">.</span><span class="identifier">onTap</span><span class="symbol">(</span><span class="identifier" id="com.erikcupal.theblackcatclient.helpers$onTap(com.badlogic.gdx.scenes.scene2d.Actor, kotlin.Function1((com.badlogic.gdx.scenes.scene2d.Actor, kotlin.Unit)))/callback">callback</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><span class="identifier">Actor</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<span class="identifier">Unit</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Scene2D helpers</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../../com.erikcupal.theblackcatclient.helpers/com.badlogic.gdx.scenes.scene2d.-group/plus-assign.html">plusAssign</a></td>
+<td>
+<code><span class="keyword">operator</span> <span class="keyword">fun </span><span class="identifier">Group</span><span class="symbol">.</span><span class="identifier">plusAssign</span><span class="symbol">(</span><span class="identifier" id="com.erikcupal.theblackcatclient.helpers$plusAssign(com.badlogic.gdx.scenes.scene2d.Group, com.badlogic.gdx.scenes.scene2d.Actor)/actor">actor</span><span class="symbol">:</span>&nbsp;<span class="identifier">Actor</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Adds an actor to the group</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../../com.erikcupal.theblackcatclient.helpers/com.badlogic.gdx.scenes.scene2d.-actor/remove-action.html">removeAction</a></td>
+<td>
+<code><span class="keyword">infix</span> <span class="keyword">fun </span><span class="identifier">Actor</span><span class="symbol">.</span><span class="identifier">removeAction</span><span class="symbol">(</span><span class="identifier" id="com.erikcupal.theblackcatclient.helpers$removeAction(com.badlogic.gdx.scenes.scene2d.Actor, com.badlogic.gdx.scenes.scene2d.Action)/action">action</span><span class="symbol">:</span>&nbsp;<span class="identifier">Action</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code>
+<p>Removes an action from the actor</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../../com.erikcupal.theblackcatclient.helpers/com.badlogic.gdx.scenes.scene2d.-actor/show.html">show</a></td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">Actor</span><span class="symbol">.</span><span class="identifier">show</span><span class="symbol">(</span><span class="identifier" id="com.erikcupal.theblackcatclient.helpers$show(com.badlogic.gdx.scenes.scene2d.Actor, kotlin.Float, com.badlogic.gdx.math.Interpolation)/time">time</span><span class="symbol">:</span>&nbsp;<span class="identifier">Float</span>&nbsp;<span class="symbol">=</span>&nbsp;0.5f<span class="symbol">, </span><span class="identifier" id="com.erikcupal.theblackcatclient.helpers$show(com.badlogic.gdx.scenes.scene2d.Actor, kotlin.Float, com.badlogic.gdx.math.Interpolation)/interpolation">interpolation</span><span class="symbol">:</span>&nbsp;<span class="identifier">Interpolation</span>&nbsp;<span class="symbol">=</span>&nbsp;fade<span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Unit</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

@@ -4,4 +4,3 @@ build/
 debug.log
 pm2.example.js
 production.guide.js
-public/doc

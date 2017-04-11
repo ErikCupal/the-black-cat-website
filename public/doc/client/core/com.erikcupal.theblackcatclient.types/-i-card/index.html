@@ -1,0 +1,57 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>ICard - core</title>
+<link rel="stylesheet" href="..\..\..\style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">core</a>&nbsp;/&nbsp;<a href="../index.html">com.erikcupal.theblackcatclient.types</a>&nbsp;/&nbsp;<a href=".">ICard</a><br/>
+<br/>
+<h1>ICard</h1>
+<code><span class="keyword">interface </span><span class="identifier">ICard</span></code>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<a href="rank.html">rank</a></td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">val </span><span class="identifier">rank</span><span class="symbol">: </span><a href="../-rank/index.html"><span class="identifier">Rank</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<a href="suit.html">suit</a></td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">val </span><span class="identifier">suit</span><span class="symbol">: </span><a href="../-suit/index.html"><span class="identifier">Suit</span></a><span class="symbol">?</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<a href="../-card/index.html">Card</a></td>
+<td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">Card</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ICard</span></code></td>
+</tr>
+<tr>
+<td>
+<a href="../../com.erikcupal.theblackcatclient.game-objects/-card-object/index.html">CardObject</a></td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">CardObject</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../com.erikcupal.theblackcatclient.gui/-group-base/index.html"><span class="identifier">GroupBase</span></a><span class="symbol">, </span><span class="identifier">ICard</span></code>
+<p>Card object</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../-card-value-change/index.html">CardValueChange</a></td>
+<td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">CardValueChange</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ICard</span></code>
+<p>Tells whether card changed it's suit and rank</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

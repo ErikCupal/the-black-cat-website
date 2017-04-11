@@ -15,5 +15,3 @@ run `npm run dev`
 ### Production
 
 run `npm run production`
-
-> Code documentation needs to be generated from [server](https://github.com/ErikCupal/the-black-cat-server) and [client](https://github.com/ErikCupal/the-black-cat-client) projects and copied into `public/doc/client` and `public/doc/server` folders.
