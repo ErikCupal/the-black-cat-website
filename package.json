@@ -10,7 +10,14 @@
     "production": "npm run pack-production && node ./build/production/server.js",
     "lint": "tslint ./src/**/*.*"
   },
-  "author": "Erik Cupal",
+  "author": {
+    "name": "Erik Cupal",
+    "email": "erik@cup.al"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ErikCupal/the-black-cat-website"
+  },
   "license": "MIT",
   "dependencies": {
     "babel-polyfill": "^6.23.0",
@@ -22,6 +29,7 @@
     "koa-static": "^3.0.0",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
+    "react-helmet": "^5.0.3",
     "react-intl": "^2.2.3",
     "react-markdown": "^2.4.6",
     "react-redux": "^5.0.3",
@@ -63,9 +71,9 @@
     "babel-preset-react": "^6.23.0",
     "babel-preset-stage-0": "^6.22.0",
     "imports-loader": "^0.7.1",
-    "koa-2-webpack": "^0.1.1",    
+    "koa-2-webpack": "^0.1.1",
     "react-hot-loader": "^3.0.0-beta.6",
-    "redux-devtools-extension": "^2.13.0",    
+    "redux-devtools-extension": "^2.13.0",
     "ts-loader": "^2.0.3",
     "tslint": "^5.0.0",
     "typescript": "^2.3.0-dev.20170403",
