@@ -27,6 +27,7 @@ run `npm run production`
 * [React Intl](https://github.com/yahoo/react-intl)
 * [Redux](https://github.com/reactjs/redux)
 * [Styled components](https://github.com/styled-components/styled-components)
+
 And more... all listed in `package.json`>dependencies
 
 ## License
