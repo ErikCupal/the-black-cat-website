@@ -1,36 +1,32 @@
 import { TOGGLE_NAVBAR } from '../../../actions'
 import { connect } from '../../../store'
-import { sm, md } from '../../../utils/css'
-import styled from 'styled-components'
+import { sm, md, style } from '../../../css'
+import glamorous from 'glamorous'
 
-const StyledNavButton = styled.button`
-  background-color: transparent;
-  margin-right: 15px;
-  border: 0;
-  margin-left: 10px;
-  &:hover { outline: none; }
-  &:focus { outline: none; }
-  ${sm`margin-right: 40px;`}
-  ${md`display: none;`}
-`
+const StyledNavButton = glamorous.button({
+  backgroundColor: 'transparent',
+  marginRight: 15,
+  border: 0,
+  marginLeft: 10,
+  ':hover': style({ outline: 'none' }),
+  ':focus': style({ outline: 'none' }),
+  [sm]: style({ marginRight: 40 }),
+  [md]: style({ display: 'none' }),
+})
 
-interface IconBarProps {
-  first?: boolean,
-  pressed?: boolean,
-}
-
-const IconBar = styled.div`
-  width: 26px;
-  height: 3px;
-  border-radius: 1.5px;
-  background-color: ${(props: IconBarProps) => props.pressed ? '#8a6c2c' : '#b38d3c'};
-  margin-top: ${(props: IconBarProps) => props.first ? '0' : '3px'};
-
-  ${sm`
-    width: 30px;
-    margin-top: ${(props: IconBarProps) => props.first ? '0' : '4px'};
-    `}
-`
+const IconBar = glamorous.div<{ pressed?: boolean, first?: boolean }>(
+  {
+    width: 26,
+    height: 3,
+    borderRadius: 1.5,
+    [sm]: style({ width: 30 })
+  },
+  props => ({
+    backgroundColor: props.pressed ? '#8a6c2c' : '#b38d3c',
+    marginTop: props.first ? 0 : 3,
+    [sm]: style({ marginTop: props.first ? 0 : 4 }),
+  }),
+)
 
 interface Props {
   pressed: boolean,
@@ -39,9 +35,9 @@ interface Props {
 
 const NavButton = ({ pressed, onClick }: Props) => (
   <StyledNavButton onClick={onClick}>
-    <IconBar pressed={pressed} first/>
-    <IconBar pressed={pressed}/>
-    <IconBar pressed={pressed}/>
+    <IconBar pressed={pressed} first />
+    <IconBar pressed={pressed} />
+    <IconBar pressed={pressed} />
   </StyledNavButton>
 )
 

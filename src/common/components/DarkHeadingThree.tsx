@@ -1,7 +1,7 @@
-import styled from 'styled-components'
+import glamorous from 'glamorous'
 
-export default styled.h3`
-  font-size: 1.6em;
-  line-height: 1.2em;
-  text-align: center;
-`
+export default glamorous.h3({
+  fontSize: '1.6rem',
+  lineHeight: 1.2,
+  textAlign: 'center',
+})

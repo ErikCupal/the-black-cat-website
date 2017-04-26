@@ -1,11 +1,11 @@
-import styled from 'styled-components'
+import glamorous from 'glamorous'
 
-export default styled.section`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+export default glamorous.section({
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'center',
+  alignItems: 'center',
 
-  padding: 10px;
-  text-align: center;
-`
+  padding: 10,
+  textAlign: 'center',
+})

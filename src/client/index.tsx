@@ -5,13 +5,16 @@ import { Provider } from 'react-redux'
 import { IntlProvider, addLocaleData } from 'react-intl'
 import cs from 'react-intl/locale-data/cs'
 declare const module: { hot: any }
+// tslint:disable-next-line:no-var-requires
+const { rehydrate } = require('glamor')
 
 import configureStore from '../common/store/configureStore'
 import { State } from '../common/types'
 import App from './App'
 
+rehydrate((window as any)._glam)
 const preloadedState: State = (window as any).__PRELOADED_STATE__
-const messages: { [key: string]: string} = (window as any).translatedMessages
+const messages: { [key: string]: string } = (window as any).translatedMessages
 const locale: string = (window as any).appLocale
 const { store, history } = configureStore(preloadedState, true)
 

@@ -2,14 +2,14 @@ import LightSection from './LightSection'
 import DarkHeadingTwo from '../DarkHeadingTwo'
 import DarkHeadingThree from '../DarkHeadingThree'
 import ExternalLink from '../ExternalLink'
-import styled from 'styled-components'
+import glamorous from 'glamorous'
 import { FormattedMessage } from 'react-intl'
 
-const ListItem = styled.li`
-  list-style-type: none;
-  line-height: 2rem;
-  font-size: 1.2rem;
-`
+const ListItem = glamorous.li({
+  listStyleType: 'none',
+  lineHeight: 2,
+  fontSize: '1.2rem',
+})
 
 const Servers = () => (
   <LightSection>

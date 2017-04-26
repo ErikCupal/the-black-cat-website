@@ -1,11 +1,11 @@
-import { md } from '../utils/css'
-import styled from 'styled-components'
+import { md, style } from '../css'
+import glamorous from 'glamorous'
 
-export default styled.p`
-  font-size: 1.2rem;
-  line-height: 1.9rem;
-  padding-bottom: 20px;
-  text-align: center;
-  margin: 0 10px;
-  ${md`width: 500px;`}
-`
+export default glamorous.p({
+  fontSize: '1.2rem',
+  lineHeight: 1.9,
+  paddingBottom: 20,
+  textAlign: 'center',
+  margin: '0 10px',
+  [md]: style({ width: 500 })
+})

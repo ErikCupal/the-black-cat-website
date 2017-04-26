@@ -11,7 +11,9 @@ import renderHtml from './renderHtml'
 import configureStore from '../../../common/store/configureStore'
 import Routes from '../../../common/routes'
 import csTranslations from '../../../common/translations/cs'
-const styleSheet = require('styled-components/lib/models/StyleSheet')
+const renderStatic: (render: () => string) => ({
+  html: string, css: string, ids: object,
+}) = require('glamor/server').renderStatic
 import detectLocale from '../../functions/detectLocale'
 
 addLocaleData(cs)
@@ -28,7 +30,7 @@ const universal = async (ctx: Context, next: () => Promise<any>) => {
     ? csTranslations
     : undefined
 
-  const html = renderToString(
+  const { html, css, ids } = renderStatic(() => renderToString(
     <IntlProvider locale={locale} messages={messages}>
       <Provider store={store}>
         <StaticRouter location={ctx.req.url} context={context}>
@@ -36,9 +38,8 @@ const universal = async (ctx: Context, next: () => Promise<any>) => {
         </StaticRouter>
       </Provider>
     </IntlProvider>
-  )
-
-  const getCSS = () => styleSheet.rules().map((rule: any) => rule.cssText).join('\n')
+  ))
+  
   const getMeta = () => {
     const helmet = Helmet.renderStatic()
     const meta = `
@@ -51,7 +52,7 @@ const universal = async (ctx: Context, next: () => Promise<any>) => {
 
   !!context.url
     ? ctx.redirect(context.url)
-    : ctx.body = renderHtml(html, getCSS(), store.getState(), getMeta(), locale, messages)
+    : ctx.body = renderHtml(html, css, ids, store.getState(), getMeta(), locale, messages)
 
   await next()
 }

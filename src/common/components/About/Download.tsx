@@ -1,13 +1,13 @@
-import styled from 'styled-components'
+import glamorous from 'glamorous'
 import DarkSection from './DarkSection'
 import ExternalLink from '../ExternalLink'
 import { FormattedMessage } from 'react-intl'
 
-const Image = styled.img`
-  width: 600px;
-  max-width: 90vw;
-  padding-top: 20px;
-`
+const Image = glamorous.img({
+  width: 600,
+  maxWidth: '90vw',
+  paddingTop: 20,
+})
 
 const Download = () => (
   <DarkSection>

@@ -1,6 +1,6 @@
-import styled from 'styled-components'
+import glamorous from 'glamorous'
 import DarkHeadingTwo from './DarkHeadingTwo'
 
-export default styled(DarkHeadingTwo)`
-  color: lemonchiffon;
-`
+export default glamorous(DarkHeadingTwo)({
+  color: 'lemonchiffon',
+})

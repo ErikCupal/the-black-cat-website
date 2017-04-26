@@ -2,27 +2,27 @@ import LightSection from './LightSection'
 import DarkHeadingTwo from '../DarkHeadingTwo'
 import DarkHeadingThree from '../DarkHeadingThree'
 import ExternalLink from '../ExternalLink'
-import styled from 'styled-components'
+import glamorous from 'glamorous'
 import { FormattedMessage } from 'react-intl'
 
-const BigLink = styled(ExternalLink) `
-  font-size: 1.3em;
-  line-height: 1em;
-  padding: 0 10px;
-`
+const BigLink = glamorous(ExternalLink)({
+  fontSize: '1.3rem',
+  lineHeight: 1,
+  padding: '0 10px',
+})
 
-const GithubRepos = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`
+const GithubRepos = glamorous.div({
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+})
 
-const DocCodeLinks = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 3rem;
-`
+const DocCodeLinks = glamorous.div({
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  marginBottom: '3rem',
+})
 
 const ForDevs = () => (
   <LightSection>

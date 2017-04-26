@@ -1,9 +1,10 @@
 import { Link } from 'react-router-dom'
-import styled from 'styled-components'
+import glamorous from 'glamorous'
+import { style } from '../css/index'
 
-export default styled(Link)`
-  color: indianred;
-  &:active { color: indianred; }
-  &:visited { color: indianred; }
-  &:hover { color: orange; }
-`
+export default glamorous(Link)({
+  color: 'indianred',
+  ':active': style({ color: 'indianred' }),
+  ':visited': style({ color: 'indianred' }),
+  ':hover': style({ color: 'orange' }),
+})

@@ -1,7 +1,7 @@
-import styled from 'styled-components'
+import glamorous from 'glamorous'
 
-export default styled.h2`
-  font-size: 2em;
-  line-height: 1.4em;
-  text-align: center;
-`
+export default glamorous.h2({
+  fontSize: '2rem',
+  lineHeight: 1.4,
+  textAlign: 'center',
+})

@@ -1,29 +1,29 @@
-import { md, sm } from '../../../utils/css'
+import { md, sm, style } from '../../../css'
 import { Link } from 'react-router-dom'
-import styled from 'styled-components'
+import glamorous from 'glamorous'
 
-const Wrapper = styled.div`
-  display: flex;
-  flex: 1;
-  justify-content: center;
-  align-items: center;
-  margin-left: 63px;
-  font-size: 30px;
-  color: floralwhite;
-  height: 75px;
-  ${sm`
-    margin-left: 92px;
-    `}
-  ${md`
-    justify-content: flex-start;
-    margin-left: 5%;
-    `}
-`
+const Wrapper = glamorous.div({
+  display: 'flex',
+  flex: 1,
+  justifyContent: 'center',
+  alignItems: 'center',
+  marginLeft: 63,
+  fontSize: 30,
+  color: 'floralwhite',
+  height: 75,
+  [sm]: style({
+    marginLeft: 92,
+  }),
+  [md]: style({
+    justifyContent: 'flex-start',
+    marginLeft: '5%',
+  }),
+})
 
-const LogoLink = styled(Link)`
-  text-decoration: none;
-  color: White;
-`
+const LogoLink = glamorous(Link)({
+  textDecoration: 'none',
+  color: 'white',
+})
 
 const Logo = () => (
   <Wrapper>

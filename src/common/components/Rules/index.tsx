@@ -1,7 +1,7 @@
 // tslint:disable:no-any
 import rulesMd from './rulesMd'
 import Markdown from 'react-markdown'
-import styled from 'styled-components'
+import glamorous from 'glamorous'
 import { Helmet } from 'react-helmet'
 import { FormattedMessage, injectIntl, InjectedIntl, defineMessages } from 'react-intl'
 
@@ -16,9 +16,9 @@ const messages = defineMessages({
   },
 })
 
-const Wrapper = styled.div`
-  padding: 10px 30px;
-`
+const Wrapper = glamorous.div({
+  padding: '10px 30px',
+})
 
 const Rules = ({ intl }: { intl: InjectedIntl }) => (
   <Wrapper>

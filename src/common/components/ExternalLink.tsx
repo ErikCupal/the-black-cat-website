@@ -1,8 +1,9 @@
-import styled from 'styled-components'
+import glamorous from 'glamorous'
+import { style } from '../css'
 
-export default styled.a`
-  color: indianred;
-  &:active { color: indianred; }
-  &:visited { color: indianred; }
-  &:hover { color: orange; }
-`
+export default glamorous.a({
+  color: 'indianred',
+  ':active': style({ color: 'indianred' }),
+  ':visited': style({ color: 'indianred' }),
+  ':hover': style({ color: 'orange' }),
+})

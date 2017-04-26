@@ -1,12 +1,12 @@
 import LightSection from './LightSection'
-import styled from 'styled-components'
+import glamorous from 'glamorous'
 import { FormattedMessage } from 'react-intl'
 
-const Heading = styled.h1`
-  font-size: 2.5em;
-  line-height: 1.5em;
-  text-align: center;
-`
+const Heading = glamorous.h1({
+  fontSize: '2.5rem',
+  lineHeight: 1.5,
+  textAlign: 'center',
+})
 
 const Intro = () => (
   <LightSection style={{ height: 200 }}>

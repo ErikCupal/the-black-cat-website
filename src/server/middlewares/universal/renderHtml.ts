@@ -20,15 +20,15 @@ const injectTranslatedMessagesIfTheyExist = (messages: { [key: string]: string }
   </script>
 `
 
-const injectLocale = (locale: string) => `
-  <script>
-    window.appLocale = '${locale}'
-  </script>
-`
+const injectLocale = (locale: string) => `<script>window.appLocale = '${locale}' </script>`
+
+const injectCssIds = (ids: object) => `<script>window._glam = ${JSON.stringify(ids)}</script>`
+
 
 const renderHtml = (
   html: string,
   css: string,
+  ids: object,
   preloadedState: State,
   meta: string,
   locale: string,
@@ -41,6 +41,7 @@ const renderHtml = (
   fonts,
   injectLocale(locale)
   + injectTranslatedMessagesIfTheyExist(translatedMessages)
+  + injectCssIds(ids)
   + injectState(preloadedState)
   + injectApp('/js/app.js'),
   )

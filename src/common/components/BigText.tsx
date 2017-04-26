@@ -1,8 +1,8 @@
-import styled from 'styled-components'
+import glamorous from 'glamorous'
 
-export default styled.span`
-  font-size: 1.8rem;
-  line-height: 1.2rem;
-  margin-bottom: 2.5rem;
-  font-weight: 500;
-`
+export default glamorous.span({
+  fontSize: '1.8rem',
+  lineHeight: 1.2,
+  marginBottom: '2.5rem',
+  fontWeight: 500,
+})

@@ -1,21 +1,21 @@
-import styled from 'styled-components'
+import glamorous from 'glamorous'
 
-const StyledFooter = styled.footer`
-  background-color: rgba(0, 0, 0, 0.8);
+const StyledFooter = glamorous.footer({
+  backgroundColor: 'rgba(0, 0, 0, 0.8)',
 
-  height: 75px;
+  height: 75,
 
-  display: flex;
-  flex: 0 0 auto;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-`
+  display: 'flex',
+  flex: '0 0 auto',
+  flexWrap: 'wrap',
+  justifyContent: 'center',
+  alignItems: 'center',
+  textAlign: 'center',
+})
 
-const FooterText = styled.span`
-  color: lemonchiffon;
-`
+const FooterText = glamorous.span({
+  color: 'lemonchiffon',
+})
 
 const Footer = () => (
   <StyledFooter>

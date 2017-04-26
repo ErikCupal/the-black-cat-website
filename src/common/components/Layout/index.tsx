@@ -1,20 +1,20 @@
 import React from 'react'
 import Header from './Header'
 import Footer from './Footer'
-import styled from 'styled-components'
+import glamourous from 'glamorous'
 
-const Wrapper = styled.div`
-  font-family: Ubuntu;
+const Wrapper = glamourous.div({
+  fontFamily: 'Ubuntu',
 
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-`
+  display: 'flex',
+  flexDirection: 'column',
+  height: '100%',
+})
 
-const Main = styled.main`
-  margin-top: 75px;
-  flex: 1;
-`
+const Main = glamourous.main({
+  marginTop: 75,
+  flex: 1,
+})
 
 const Layout = ({ children }: React.Props<{}>) => (
   <Wrapper>
