@@ -1,6 +1,7 @@
 const path = require('path')
 const webpack = require('webpack')
 const nodeExternals = require('webpack-node-externals')
+const CompressionPlugin = require("compression-webpack-plugin")
 
 const server = (debug) => ({
 
@@ -64,7 +65,7 @@ const server = (debug) => ({
     : [
       new webpack.DefinePlugin({
         'process.env.NODE_ENV': JSON.stringify('production')
-      })
+      }),
     ]
 })
 
@@ -136,7 +137,14 @@ const client = () => ({
         screw_ie8: true
       },
       comments: false
-    })
+    }),
+    new CompressionPlugin({
+      asset: "[path].gz[query]",
+      algorithm: "gzip",
+      test: /\.(js|html)$/,
+      threshold: 10240,
+      minRatio: 0.8
+    }),
   ],
 })
 
