@@ -77,7 +77,7 @@
     "redux-devtools-extension": "^2.13.0",
     "ts-loader": "^2.0.3",
     "tslint": "^5.0.0",
-    "typescript": "^2.3.0-dev.20170403",
+    "typescript": "^2.4.0-dev.20170430",
     "webpack": "^2.3.3",
     "webpack-dev-middleware": "^1.10.1",
     "webpack-dev-server": "^2.4.2",
