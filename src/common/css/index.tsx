@@ -1,12 +1,6 @@
 import { css as _css, StyleAttribute } from 'glamor'
 
 export const css: (...rules: React.CSSProperties[]) => StyleAttribute = _css
-export const s = css
-export const ss = css
-export const S = css
-export const SS = css
-export const $ = css
-export const $$ = css
 
 const minWidthMedia = (px: number) => `@media(min-width: ${px}px)`
 
