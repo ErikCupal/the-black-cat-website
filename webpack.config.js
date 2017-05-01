@@ -134,9 +134,11 @@ const client = () => ({
         keep_fnames: true
       },
       compress: {
-        screw_ie8: true
+        screw_ie8: true,
+        warnings: false,
       },
-      comments: false
+      comments: false,
+      sourceMap: false,
     }),
     new CompressionPlugin({
       asset: "[path].gz[query]",
